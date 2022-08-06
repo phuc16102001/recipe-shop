@@ -1,29 +1,15 @@
 <div class="row">
   <div class="col-xs-12">
-    <div class="mt-3 btn btn-success">New recipe</div>
+    <div class="btn btn-success">New recipe</div>
   </div>
 </div>
 <hr />
 <div class="row">
   <ul class="col-xs-12 list-group m-2">
-    <li
-      href="#"
-      class="list-group-item list-group-item-action"
+    <app-recipe-item
       *ngFor="let recipe of recipes"
-    >
-      <div class="d-flex justify-content-between">
-        <div>
-          <h4 class="list-group-item-heading">{{ recipe.name }}</h4>
-          <p class="list-group-item-text">{{ recipe.description }}</p>
-        </div>
-        <div>
-          <img
-            [src]="recipe.imagePath"
-            alt="{{ recipe.name }}"
-            height="100px"
-          />
-        </div>
-      </div>
-    </li>
+      [recipe]="recipe"
+      (onSelect)="emitSelect(recipe)"
+    ></app-recipe-item>
   </ul>
 </div>

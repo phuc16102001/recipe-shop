@@ -7,6 +7,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./recipes.component.css'],
 })
 export class RecipesComponent implements OnInit {
+  selectedRecipe: Recipe;
+
+  setRecipe = (recipe) => {
+    this.selectedRecipe = recipe;
+  };
 
   constructor() {}
 
