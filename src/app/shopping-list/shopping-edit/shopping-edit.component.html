@@ -3,19 +3,35 @@
     <form>
       <div class="row">
         <div class="mb-3 col-sm-5 form-group">
-            <label for="name" class="form-label">Name</label>
-            <input type="text" id="name" class="form-control">
+          <label for="name" class="form-label">Name</label>
+          <input
+            type="text"
+            id="name"
+            class="form-control"
+            #ingredientNameInput
+          />
         </div>
         <div class="mb-3 col-sm-2 form-group">
-            <label for="amount" class="form-label">Amount</label>
-            <input type="number" id="amount" class="form-control">
+          <label for="amount" class="form-label">Amount</label>
+          <input
+            type="number"
+            id="amount"
+            class="form-control"
+            #ingredientAmountInput
+          />
         </div>
       </div>
       <div class="row">
         <div class="col-xs-12">
-            <button class="me-3 btn btn-success" type="submit">Add</button>
-            <button class="me-3 btn btn-danger" type="button">Delete</button>
-            <button class="btn btn-primary" type="button">Clear</button>
+          <button
+            class="me-3 btn btn-success"
+            type="button"
+            (click)="emitAdd()"
+          >
+            Add
+          </button>
+          <button class="me-3 btn btn-danger" type="button">Delete</button>
+          <button class="btn btn-primary" type="button">Clear</button>
         </div>
       </div>
     </form>

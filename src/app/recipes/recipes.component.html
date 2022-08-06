@@ -5,6 +5,7 @@
   <div class="col-md-7">
     <app-recipe-detail
       *ngIf="selectedRecipe; else infoEmpty"
+      [recipe]="selectedRecipe"
     ></app-recipe-detail>
     <ng-template #infoEmpty>Please select a recipe</ng-template>
   </div>
